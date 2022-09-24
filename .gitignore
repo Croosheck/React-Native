@@ -1,0 +1,9 @@
+**/node_modules/
+dist
+.parcel-cache
+**/.env
+**/app.config.js
+01-Todo-List/
+02-RNCourse/
+03-Authentication/
+04-Favorite-Locations/
