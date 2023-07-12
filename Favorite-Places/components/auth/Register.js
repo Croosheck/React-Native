@@ -13,8 +13,6 @@ import Animated, {
 	useSharedValue,
 	useAnimatedStyle,
 	withSpring,
-	withRepeat,
-	withTiming,
 } from "react-native-reanimated";
 
 import { auth, db } from "../../firebase";

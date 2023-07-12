@@ -58,10 +58,8 @@ const styles = StyleSheet.create({
 	mealItem: {
 		margin: 16,
 		borderRadius: 8,
-		overflow: "hidden",
 		backgroundColor: "white",
 		elevation: 8,
-		backgroundColor: "white",
 		shadowColor: "black",
 		shadowOpacity: 0.35,
 		shadowOffset: { width: 0, height: 2 },

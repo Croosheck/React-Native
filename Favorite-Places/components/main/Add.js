@@ -90,9 +90,18 @@ export default function Add({ navigation, route }) {
 		if (locationPermissionInformation.status === PermissionStatus.DENIED) {
 			Alert.alert(
 				"Insufficient Permissions!",
-				"You need to grant location permissions to use this feature."
+				"You need to grant location permissions to use this feature.",
+				[
+					{
+						onPress: async () => {
+							const permissionResponse = await requestPermission();
+						},
+						style: "default",
+						text: "OK",
+					},
+				]
 			);
-			return false;
+			return locationPermissionInformation.granted;
 		}
 
 		return true;

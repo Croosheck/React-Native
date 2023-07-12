@@ -194,18 +194,7 @@ export default function Save({ navigation, route }) {
 						/>
 					</Animated.View>
 				</View>
-				<Animated.View
-					// onLayout={(event) => {
-					// 	const layout = event.nativeEvent.layout;
-					// 	console.log("height:", layout.height);
-					// 	console.log("width:", layout.width);
-					// 	console.log("x:", layout.x);
-					// 	console.log("y:", layout.y);
-					// 	console.log("height:", Dimensions.get("window").height);
-					// 	console.log("width:", Dimensions.get("window").width);
-					// }}
-					style={[styles.buttonContainer, reanimatedButton]}
-				>
+				<Animated.View style={[styles.buttonContainer, reanimatedButton]}>
 					{toggleButton}
 				</Animated.View>
 				<Animated.View style={[styles.progressContainer, reanimatedProgress]}>
@@ -222,17 +211,13 @@ export default function Save({ navigation, route }) {
 
 const styles = StyleSheet.create({
 	container: {
-		// alignItems: "center",
-		// backgroundColor: "#FF9E9E",
 		backgroundColor: "#361A1A",
 		paddingTop: 8,
 	},
 	scrollContent: {
-		// flex: 1,
 		alignItems: "center",
 	},
 	image: {
-		// flex: 0.4,
 		width: Dimensions.get("window").width - 40,
 		minHeight: Dimensions.get("window").width - 40,
 		maxHeight: "60%",
@@ -247,10 +232,7 @@ const styles = StyleSheet.create({
 		marginVertical: 8,
 	},
 	inputContainer: {
-		// flex: 1,
 		width: "80%",
-		// borderWidth: 2,
-		// borderColor: "white",
 	},
 	input: {
 		padding: 4,
@@ -265,7 +247,6 @@ const styles = StyleSheet.create({
 		flex: 0.2,
 		justifyContent: "center",
 		alignItems: "center",
-		// borderWidth: 2,
 	},
 	text: {
 		fontSize: 18,
@@ -278,12 +259,6 @@ const styles = StyleSheet.create({
 	},
 	buttonContainer: {
 		flex: 0.4,
-		// flex: 1,
-		// justifyContent: "center",
-		// alignItems: "center",
 		marginTop: 8,
-
-		// borderWidth: 2,
-		// borderColor: "white",
 	},
 });

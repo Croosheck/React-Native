@@ -14,6 +14,8 @@ export const getUser = createAsyncThunk("user/getUser", async () => {
 	}
 });
 
+const extraReducers = createExtraReducers(getUser);
+
 export const userSlice = createSlice({
 	name: "user",
 	initialState: {
@@ -31,12 +33,21 @@ export const userSlice = createSlice({
 			state.placesList = [];
 		},
 	},
-	extraReducers: {
-		[getUser.fulfilled]: (state, { payload }) => {
-			state.currentUser = payload;
-		},
-	},
+	extraReducers,
 });
+
+function createExtraReducers(thunk) {
+	return (builder) => {
+		const { fulfilled, pending } = thunk;
+
+		builder.addCase(fulfilled, (state, { payload }) => {
+			state.currentUser = payload;
+		});
+		builder.addCase(pending, (state) => {
+			state.currentUser = null;
+		});
+	};
+}
 
 export const { logoutUser, loadPlaces, clearPlaces } = userSlice.actions;
 

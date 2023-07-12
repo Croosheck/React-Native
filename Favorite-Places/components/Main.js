@@ -81,7 +81,7 @@ export default function Main() {
 							<MaterialCommunityIcons name="plus" color={color} size={26} />
 						);
 					},
-					ttabBarShowLabel: false,
+					tabBarShowLabel: false,
 				}}
 				listeners={({ navigation }) => ({
 					tabPress: (event) => {

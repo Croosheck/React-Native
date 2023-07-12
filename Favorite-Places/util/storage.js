@@ -49,7 +49,7 @@ export default async function uploadFile(image, type, data) {
 	const response = await fetch(image);
 	const blob = await response.blob();
 
-	// File's uploading to Firebase Store
+	// Files uploading to Firebase Storage
 	await uploadBytes(imagesRef, blob);
 
 	return { imagesRef, blob, formatedDate };
